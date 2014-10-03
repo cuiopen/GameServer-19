@@ -1,0 +1,72 @@
+
+inet =
+{
+    inner="eth0",
+    outer="eth0",
+}
+
+-- master server
+master =
+{
+    --ip="127.0.0.1",
+    ip="",
+    port=7777,
+    extip="",
+    extport=0,
+
+    ack=1,
+    sync=1,
+    processing=1,
+    recycle=1,
+}
+
+-- login server
+login = 
+{
+    port=3333,
+    extport=4444,
+
+    ack=8,
+    ack_tasks=512,
+    sync=1,
+    processing=8,
+    processing_tasks=512,
+    recycle=1,
+}
+
+-- gateway server
+gateway = 
+{
+    port=1111,
+    extport=2222,
+
+    ack=8, -- ack threads
+    ack_tasks=512, -- tasks in per ack thread
+    sync=1,
+    processing=8, -- processing threads
+    processing_tasks=512, -- tasks in per processing thread
+    recycle=1,
+}
+
+-- session server
+session =
+{
+    port=8888,
+
+    ack=1,
+    sync=1,
+    processing=1,
+    recycle=1,
+}
+
+-- game server
+game =
+{
+    port=9999,
+
+    ack=1,
+    sync=1,
+    processing=1,
+    recycle=1,
+}
+

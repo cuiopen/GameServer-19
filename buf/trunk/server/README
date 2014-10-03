@@ -1,0 +1,35 @@
+[0]
+    Linux基于epoll的LT模式
+    Mac OS X基于kqueue的EV_ADD模式
+
+[1]
+    这是一个游戏服务器框架
+    必须在此基础上进行二次开发
+    我只是使一个工作尽可能地简单
+
+[2]
+    这是一个基于Lua配置的游戏系统
+    尽量使用带用JIT版本的Lua
+    效率和性能待测试
+    希望你能提供更详细的测试数据
+
+[3]
+    这个框架所依赖的第三方软件有：
+        linux
+        g++
+        libz
+        libxml
+        mysql
+
+run()
+{   
+    // 对主动管理器连接进行消息处理
+    MasterClient.doProcess();
+    // 对主动数据库的连接进行消息处理
+    RecordClient.doProcess();
+    // 对主动会话连接进行消息处理 
+    SessionClient.doProcess();
+    // 对所有的被动连接进行消息处理
+    ProcessorMgr.enum();
+}
+
