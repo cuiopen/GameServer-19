@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# cscope,ctags files
+TAGS
+tags
+cscope*
+
